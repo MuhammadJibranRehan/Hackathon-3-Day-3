@@ -93,7 +93,7 @@ function HeroSection() {
           {current.description}
         </p>
         <Link
-          href="#"
+          href="/AllProducts"
           className="inline-block bg-pink-500 text-white text-sm font-medium py-3 px-6 rounded-md mt-6 hover:bg-pink-600 transition-all duration-300 w-1/3 text-center"
         >
           {current.buttonText}
@@ -119,6 +119,7 @@ function HeroSection() {
       <div className="absolute bottom-5 left-1/2 transform -translate-x-1/2 flex space-x-2">
         {slides.map((_, index) => (
           <button
+            title='Bttn'
             key={index}
             onClick={() => setCurrentSlide(index)}
             className={`w-3 h-3 rounded-full ${

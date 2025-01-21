@@ -82,10 +82,7 @@ function BlogSection() {
             </div>
 
             {/* Blog Title */}
-            <h3
-              className="font-bold text-lg mt-4"
-              style={{ color: blog.titleColor }}
-            >
+            <h3 className={`font-bold text-lg mt-4 text-[${blog.titleColor}]`}>
               {blog.title}
             </h3>
 
@@ -95,8 +92,7 @@ function BlogSection() {
             {/* Read More */}
             <Link href="/blog">
               <button
-                className="underline text-sm font-medium mt-4"
-                style={{ color: blog.titleColor }}
+                className={`underline text-sm font-medium mt-4 ${blog.titleColor ? `text-${blog.titleColor}` : 'text-black'}`}
               >
                 Read More
               </button>

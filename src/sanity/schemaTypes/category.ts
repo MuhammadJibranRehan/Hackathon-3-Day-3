@@ -1,24 +1,14 @@
-import { Rule } from '@sanity/types';
+import { defineType } from 'sanity';
 
-const categorySchema = {
+export const category = defineType({
   name: 'category',
-  type: 'document',
   title: 'Category',
+  type: 'document',
   fields: [
     {
-      name: 'title',
+      name: 'name',
+      title: 'Category Name',
       type: 'string',
-      title: 'Title',
-      validation: (Rule: Rule) => Rule.required().error('Title is required'),
-    },
-    {
-      name: 'description',
-      type: 'text',
-      title: 'Description',
-      validation: (Rule: Rule) =>
-        Rule.max(150).warning('Keep the description under 150 characters.'),
     },
   ],
-};
-
-export default categorySchema;
+});

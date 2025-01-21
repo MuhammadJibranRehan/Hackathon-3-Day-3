@@ -55,14 +55,14 @@ function LatestProducts() {
                   Sale
                 </span>
                 <div className="absolute bottom-6 flex items-center justify-center flex-col left-4 space-y-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                  <button className="bg-white p-2 rounded-full shadow group-hover:bg-[#eeeffb]">
+                  <button className="bg-white p-2 rounded-full shadow group-hover:bg-[#eeeffb]">.
                     <LuShoppingCart className="w-6 h-6 text-[#3F509E]" />
                   </button>
                   <button className="bg-white p-2 ">
-                    <FaRegHeart className="w-4 h-4 text-[#3F509E]" />
+                    <FaRegHeart className="w-4 h-4 text-[#3F509E]" />.
                   </button>
                   <button className="bg-white p-2 ">
-                    <FaSearchPlus className="w-4 h-4 text-[#3F509E]" />
+                    <FaSearchPlus className="w-4 h-4 text-[#3F509E]" />.
                   </button>
                 </div>
                 <Image

@@ -1,33 +1,52 @@
 'use client';
-import Link from 'next/link';
+import React from 'react';
+import BgImg from '@/Assets/newsletter.png';
+import BrandImg from '@/Assets/brands.png';
 import Image from 'next/image';
+import { Wrapper } from './shared/wrapper';
+import toast, { Toaster } from 'react-hot-toast';
 
-function Newslater() {
+const notify = () => toast.success('Successfully Subscribed');
+
+const NewsLetter = () => {
   return (
-    <div className="w-full bg-white">
-      {/* Newslater Section */}
-      <div
-        className="w-full bg-cover bg-center py-20"
-        style={{ backgroundImage: "url('/images/background.png')" }}
-      >
-        <div className="max-w-screen-xl mx-auto text-center">
-          {/* Heading */}
-          <h2 className="text-3xl font-bold text-[#151875] mb-6">
-            Get Latest Update By Subscribe Our Newsletter
-          </h2>
-
-          {/* Subscribe Button */}
-          <Link href="/shoplist">
-            <button className="bg-[#FB2E86] text-white px-6 py-2 rounded-non text-lg font-medium">
-              Shop Now
+    <Wrapper>
+      <div className="flex flex-col justify-center items-center space-y-12 mt-20">
+        <div className="relative">
+          <Image src={BgImg} alt="Background" />
+          <div className=" absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 flex items-center justify-center flex-col  md:mr-48">
+            <h2 className="lg:text-2xl text-[#30207a] text-xs md:text-sm  font-bold font-serif text-center">
+              Get Leatest Update By Subscribe Our Newslater
+            </h2>
+            <button
+              onClick={notify}
+              className="bg-[#FB2E86] md:p-2   text-white rounded-sm text-xs md:text-base  md:font-sans px-1 py-1 md:px-2 mt-0.5 md:mt-4"
+            >
+              Subscribe Now
             </button>
-          </Link>
+          </div>
+        </div>
+        <div className="cursor-pointer md:hover:scale-105 hover:shadow-sm mt-10 duration-1000">
+          <Image src={BrandImg} alt="Brands" />
         </div>
       </div>
-
-      {/* Logos Section */}
-    </div>
+      <Toaster
+        position="top-right"
+        reverseOrder={false}
+        gutter={4}
+        containerClassName="absolute top-0"
+        containerStyle={{}}
+        toastOptions={{
+          // Define default options
+          className: 'slide-toast',
+          duration: 1000,
+          style: {
+            background: '#363636',
+            color: '#fff',
+          },
+        }}
+      />
+    </Wrapper>
   );
-}
-
-export default Newslater;
+};
+export default NewsLetter;

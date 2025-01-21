@@ -1,3 +1,5 @@
+// src/app/page.tsx
+
 import BlogSection from '@/components/BlogSection';
 import Discount from '@/components/Discount';
 import FeaturedProducts from '@/components/Feautreprod';

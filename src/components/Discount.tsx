@@ -76,10 +76,7 @@ function Discount() {
 
           {/* Right Side - Image Section */}
           <div className="relative flex justify-center">
-            <div
-              className="absolute inset-0 bg-pink-100 w-[400px] h-[400px] -z-10 rounded-full"
-              style={{ margin: 'auto' }}
-            ></div>
+            <div className="absolute inset-0 bg-pink-100 w-[400px] h-[400px] -z-10 rounded-full m-auto"></div>
             <Image
               src="/images/sofa3.png"
               alt="Discount Sofa"
